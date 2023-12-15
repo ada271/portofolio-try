@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root{
+    --dark-green: #344e41;
+    --green:#3a5a40;
+    --light-green:#588157;
+    --text-color:#dad7cd;
+    --text-dark:#fefae0;
+    
+}
+
+/* ---------------------------------- */
+/*               HEADER               */
+/* ---------------------------------- */
+
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    padding: 2rem;
+    background:var(--dark-green);
+    height: 10vh; 
+    width: 100%;  
+    border-bottom: 1px solid var(--text-dark);
+    font-family: "Montserrat";
+    position: fixed;
+    z-index: 4;
+    top: 0;
+
+}
+
+.left{
+    font-size: 2rem;
+    color: var(--text-dark);
+}
+
+.right{
+   
+    
+}
+
+.right ul{
+    list-style-type: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.right ul li a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+
+/* ---------------------------------- */
+/*                MAIN                */
+/* ---------------------------------- */
+
+
+.container-m{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    position: relative;
+    background: var(--dark-green);
+    margin-top: 10vh;
+    
+}
+
+.container-m img{
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    animation: go-around 8s infinite alternate  ease-in;
+    width: 150px;
+    height: 150px;
+    border-radius: 10rem;
+}
+
+.container-text{
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    gap: 1rem;
+    color: var(--text-dark);
+    box-shadow: 0 0 10px var(--light-green);
+    padding: 1rem;
+    font-family: "League Spartan";
+
+}
+
+.container-text h3{
+    font-size: 1.5rem;
+}
+
+.container-text h2{
+    font-size: 3rem;
+    color: var(--text-color);
+    text-shadow: 0 0 10px black;
+    font-weight: 400;
+}
+
+.container-text p{
+    font-size: 1.3rem;
+}
+
+.socials{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    font-size: 3rem;
+}
+
+@keyframes go-around{
+    
+    0%{
+        transform: translate(0);
+    }
+    
+    25%{
+        transform: translateY(400%);
+    }
+
+    50%{
+        transform: translate(1000%,400%);
+    }
+    
+    75%{
+        transform: translate(1000%,0);
+    }
+
+    100%{
+        transform: translate(0,0);
+    }
+}
+
